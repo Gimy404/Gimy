@@ -3737,10 +3737,24 @@
                                                                 <div class="col-sm-12  single">
                                                                     <div data-field-wrapper="fld_7908577"
                                                                         class="form-group" id="fld_7908577_2-wrap">
-                                                                        <div class=""> <input class="btn btn-default"
-                                                                                type="submit" name="fld_7908577"
-                                                                                id="fld_7908577_2" value="Send Message"
-                                                                                data-field="fld_7908577"></div>
+                                                                            <input class="btn btn-default" type="button" value="Send Message" onclick="
+                                                                            var firstName = document.getElementById('fld_8768091_1').value;
+                                                                            var lastName = document.getElementById('fld_9970286_1').value;
+                                                                            var emailAddress = document.getElementById('fld_6009157_1').value;
+                                                                            var phoneNumber = document.getElementById('fld_184229_1').value;
+                                                                            var comments = document.getElementById('fld_7683514_1').value;
+                                                                            
+                                                                            var mailtoLink = 'mailto:m.gamal.zaid1@gmail.com';
+                                                                            mailtoLink += '?subject=Contact Form Submission';
+                                                                            mailtoLink += '&body=First Name: ' + encodeURIComponent(firstName);
+                                                                            mailtoLink += '%0D%0ALast Name: ' + encodeURIComponent(lastName);
+                                                                            mailtoLink += '%0D%0AEmail Address: ' + encodeURIComponent(emailAddress);
+                                                                            mailtoLink += '%0D%0APhone Number: ' + encodeURIComponent(phoneNumber);
+                                                                            mailtoLink += '%0D%0AComments / Questions: ' + encodeURIComponent(comments);
+                                                                            
+                                                                            window.location.href = mailtoLink;
+                                                                            ">
+
                                                                     </div> <input class="button_trigger_2" type="hidden"
                                                                         name="fld_7908577" id="fld_7908577_2_btn"
                                                                         value="" data-field="fld_7908577" />
