@@ -4496,7 +4496,7 @@
 
                 $.ajax({
                     url: 'send_mail.php',
-                    type: 'POST',
+                    type: 'GET',
                     data: $(this).serialize(),
                     success: function(response) {
                         $('#response').html('<p>' + response + '</p>');
