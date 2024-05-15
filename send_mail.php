@@ -1,12 +1,12 @@
 <?php
 if (isset($_GET['submit'])) {
-    $fname = htmlspecialchars($_POST['fname']);
-    $lname = htmlspecialchars($_POST['lname']);
+    $fname = htmlspecialchars($_GET['fname']);
+    $lname = htmlspecialchars($_GET['lname']);
 
-  $email = htmlspecialchars($_POST['email']);
-      $phone = htmlspecialchars($_POST['phone']);
+  $email = htmlspecialchars($_GET['email']);
+      $phone = htmlspecialchars($_GET['phone']);
 
-    $message = htmlspecialchars($_POST['message']);
+    $message = htmlspecialchars($_GET['message']);
 
     $to = 'm.gamal.zaid1@gmail.com'; // Replace with your email address
     $subject = 'Portofolio';
