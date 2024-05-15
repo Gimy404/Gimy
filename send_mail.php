@@ -8,7 +8,6 @@ if (isset($_GET['submit'])) {
 
     $message = htmlspecialchars($_GET['message']);
 
-    return $email;
     
     $to = 'm.gamal.zaid1@gmail.com'; // Replace with your email address
     $subject = 'Portofolio';
