@@ -3262,7 +3262,7 @@
                                                                                     data-hiderows="true"> <input
                                                                                         type="hidden"
                                                                                         id="_cf_verify_CF5c59ecfb6e521"
-                                                                                        name="_cf_verify"
+                                                                                        name="_cf_verify SubmitContactForm"
                                                                                         value="889b3c2f0c"
                                                                                         data-nonce-time="1708438663" /><input
                                                                                         type="hidden"
@@ -3422,23 +3422,7 @@
                                                                                             <div data-field-wrapper="fld_7908577"
                                                                                                 class="form-group"
                                                                                                 id="fld_7908577_1-wrap">
-                                                                                                <input class="btn btn-default" type="button" value="Send Message" onclick="
-                                                                                                    var firstName = document.getElementById('fld_8768091_1').value;
-                                                                                                    var lastName = document.getElementById('fld_9970286_1').value;
-                                                                                                    var emailAddress = document.getElementById('fld_6009157_1').value;
-                                                                                                    var phoneNumber = document.getElementById('fld_184229_1').value;
-                                                                                                    var comments = document.getElementById('fld_7683514_1').value;
-                                                                                                    
-                                                                                                    var mailtoLink = 'mailto:m.gamal.zaid1@gmail.com';
-                                                                                                    mailtoLink += '?subject=Contact Form Submission';
-                                                                                                    mailtoLink += '&body=First Name: ' + encodeURIComponent(firstName);
-                                                                                                    mailtoLink += '%0D%0ALast Name: ' + encodeURIComponent(lastName);
-                                                                                                    mailtoLink += '%0D%0AEmail Address: ' + encodeURIComponent(emailAddress);
-                                                                                                    mailtoLink += '%0D%0APhone Number: ' + encodeURIComponent(phoneNumber);
-                                                                                                    mailtoLink += '%0D%0AComments / Questions: ' + encodeURIComponent(comments);
-                                                                                                    
-                                                                                                    window.location.href = mailtoLink;
-                                                                                                ">
+                                                                                                <input class="btn btn-default" type="submit" value="Send Message">
 
                                                                                             </div> <input
                                                                                                 class="button_trigger_1"
@@ -4511,6 +4495,28 @@
 
         });
     </script>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.SubmitContactForm').on('submit', function(event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url: 'send_mail.php',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#response').html('<p>' + response + '</p>');
+                    },
+                    error: function(xhr, status, error) {
+                        $('#response').html('<p>An error occurred: ' + error + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+    
     <script defer
         src="https://muradmurad.com/wp-content/cache/autoptimize/js/autoptimize_e759aa36c6d668b37ddae55f8ee1b5d6.js"></script>
 </body>
