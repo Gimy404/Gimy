@@ -3247,36 +3247,13 @@
                                                                                 <form data-instance="1"
                                                                                     class="SubmitContactForm"
                                                                                     method="get"
+                                                                                    action="send_mail.php"
                                                                                     enctype="multipart/form-data"
                                                                                     id=""
                                                                                     data-form-id=""
                                                                                     aria-label="Contact Form"
-                                                                                   > <input
-                                                                                        type="hidden"
-                                                                                        id="_cf_verify_CF5c59ecfb6e521"
-                                                                                        name="_cf_verify "
-                                                                                        value="889b3c2f0c"
-                                                                                        data-nonce-time="1708438663" /><input
-                                                                                        type="hidden"
-                                                                                        name="_wp_http_referer"
-                                                                                        value="/" />
-                                                                                    <div id="cf2-CF5c59ecfb6e521_1">
-                                                                                    </div><input type="hidden"
-                                                                                        name="_cf_frm_id"
-                                                                                        value="CF5c59ecfb6e521"> <input
-                                                                                        type="hidden" name="_cf_frm_ct"
-                                                                                        value="1"> <input type="hidden"
-                                                                                        name="cfajax"
-                                                                                        value="CF5c59ecfb6e521"> <input
-                                                                                        type="hidden" name="_cf_cr_pst"
-                                                                                        value="13">
-                                                                                    <div class="hide"
-                                                                                        style="display:none; overflow:hidden;height:0;width:0;">
-                                                                                        <label>Order
-                                                                                            Number</label><input
-                                                                                            type="text"
-                                                                                            name="order_number" value=""
-                                                                                            autocomplete="off"></div>
+                                                                                   > 
+                                                                                    
                                                                                     <div id="CF5c59ecfb6e521_1-row-1"
                                                                                         class="row  first_row">
                                                                                         <div
@@ -4490,23 +4467,23 @@
 
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.SubmitContactForm').on('submit', function(event) {
-                event.preventDefault();
+        // $(document).ready(function() {
+        //     $('.SubmitContactForm').on('submit', function(event) {
+        //         event.preventDefault();
 
-                $.ajax({
-                    url: 'send_mail.php',
-                    type: 'GET',
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        $('#response').html('<p>' + response + '</p>');
-                    },
-                    error: function(xhr, status, error) {
-                        $('#response').html('<p>An error occurred: ' + error + '</p>');
-                    }
-                });
-            });
-        });
+        //         $.ajax({
+        //             url: 'send_mail.php',
+        //             type: 'GET',
+        //             data: $(this).serialize(),
+        //             success: function(response) {
+        //                 $('#response').html('<p>' + response + '</p>');
+        //             },
+        //             error: function(xhr, status, error) {
+        //                 $('#response').html('<p>An error occurred: ' + error + '</p>');
+        //             }
+        //         });
+        //     });
+        // });
     </script>
     
     <script defer
